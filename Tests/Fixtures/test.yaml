@@ -1,0 +1,11 @@
+test:
+  a: 1
+  b: 'test'
+  c:
+    - 'one'
+    - 'two'
+    - 'three'
+
+imports:
+  -
+    resource: include.yaml

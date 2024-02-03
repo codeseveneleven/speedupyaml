@@ -11,11 +11,11 @@
  * The TYPO3 project - inspiring people to share!
  */
 
-$EM_CONF['siteconfiggitsync'] = [
-    'title' => '(Code711) Site Config Git Sync',
-    'description' => 'This extension will push changes to the site config yaml files back to your gitlab repository by creating a branch for the changes along with a merge-request. It is targeted towards automated CI/CD installations or sites in general where the site-config is git versioned. No local git binary or .git directory is needed. Requires EXT:siteconfigurationevents',
+$EM_CONF[$EM_CONF] = [
+    'title' => '(Code711) Speed up YAML parsing',
+    'description' => 'This extension provides an XCLASS for TYPO3\'CMS\\Core\\Configuration\\Loader\\YamlFileLoader to use the pecl extension YAML if available instead of the Symfonies\'s Yaml::parse. This should speed up the parsing of the siteconfig yaml and associated files. It does not touch EXT:form yaml files. This extension is experimental and a proof-of-concept. It might work in production.',
     'category' => 'plugin',
-    'version' => '1.0.3',
+    'version' => '0.0.1',
     'state' => 'stable',
     'clearcacheonload' => 1,
     'author' => 'Frank Berger',
@@ -23,8 +23,7 @@ $EM_CONF['siteconfiggitsync'] = [
     'author_company' => 'Code711, a label of Sudhaus7, B-Factor GmbH and 12bis3 GbR',
     'constraints' => [
         'depends' => [
-            'typo3' => '11.5.0-12.99.99',
-            'siteconfigurationevents' => '1.0.0-1.99.99',
+            'typo3' => '10.4.0-13.99.99'
         ],
         'conflicts' => [
         ],
@@ -33,7 +32,7 @@ $EM_CONF['siteconfiggitsync'] = [
     ],
     'autoload' => [
         'psr-4' => [
-            'Code711\\SiteConfigGitSync\\' => 'Classes',
+            'Code711\\Speedupyaml\\' => 'Classes',
         ],
     ],
 ];

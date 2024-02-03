@@ -89,7 +89,6 @@ fabric.properties
 /phpunit.xml
 
 # Build data
-/build/
 /.Build/
 
 # Composer PHAR

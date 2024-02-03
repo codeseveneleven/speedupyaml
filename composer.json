@@ -1,6 +1,6 @@
 {
   "name": "code711/speedupyaml",
-  "description": "Uses the ext-yaml php pecl extension if available when calling YamlLoader",
+  "description": "This extension provides an XCLASS for TYPO3\\CMS\\Core\\Configuration\\Loader\\YamlFileLoader to use the pecl extension YAML if available instead of the Symfonies\\'s Yaml::parse. This extension is experimental and a proof-of-concept. It might work in production.",
   "type": "typo3-cms-extension",
   "config": {
     "platform": {
@@ -71,6 +71,7 @@
     "cmscacheflush": "@php vendor/bin/typo3cms cache:flush",
     "csfixer": "@php vendor/bin/php-cs-fixer fix",
     "psalm": "@php ./vendor/bin/psalm --no-cache  --show-info=true --php-version=8.1",
-    "phpstan": "@php ./vendor/bin/phpstan analyze -l 9 ./Classes"
+    "phpstan": "@php ./vendor/bin/phpstan analyze -l 9 ./Classes",
+    "test:php:unit": "./vendor/bin/phpunit --colors=always --configuration Build/phpunit/UnitTests.xml"
   }
 }

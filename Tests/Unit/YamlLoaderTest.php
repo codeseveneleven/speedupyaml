@@ -6,14 +6,15 @@ use Code711\Speedupyaml\YamlFileLoader;
 use SUDHAUS7\Speedupyaml\Tests\Unit\Mock\YamlFileLoaderMock;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
+use function file_get_contents;
 
-class PeclLoaderTest extends UnitTestCase
+class YamlLoaderTest extends UnitTestCase
 {
 
 
 	function testYamlFileIsLoadedAndParsed(): void
 	{
-		$content = \file_get_contents( __DIR__.'/../Fixtures/test.yaml');
+		$content = file_get_contents( __DIR__.'/../Fixtures/test.yaml');
 		$fileloader = new YamlFileLoaderMock();
 		$parsed = $fileloader->mockedUseSymfonyParser( $content);
 

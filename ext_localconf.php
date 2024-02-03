@@ -10,3 +10,10 @@
  *
  * The TYPO3 project - inspiring people to share!
  */
+
+
+use Code711\Speedupyaml\YamlFileLoader;
+
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['Objects'][\TYPO3\CMS\Core\Configuration\Loader\YamlFileLoader::class] = [
+	'className' => YamlFileLoader::class
+];

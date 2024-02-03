@@ -2,6 +2,8 @@
 
 namespace Code711\Speedupyaml;
 
-class InvalidConfigurationFileException {
+use Exception;
+
+class InvalidConfigurationFileException  extends Exception {
 
 }
