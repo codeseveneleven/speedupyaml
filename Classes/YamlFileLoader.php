@@ -30,6 +30,9 @@ class YamlFileLoader extends Core\YamlFileLoader
 		} finally {
 			restore_error_handler();
 		}
+		if ($config === null) { 
+			$config = [];
+		}
 		return $config;
 	}
 
