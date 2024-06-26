@@ -11,7 +11,7 @@
  * The TYPO3 project - inspiring people to share!
  */
 
-$EM_CONF[$EM_CONF] = [
+$EM_CONF[$_EXTKEY] = [
     'title' => '(Code711) Speed up YAML parsing',
     'description' => 'This extension provides an XCLASS for TYPO3\'CMS\\Core\\Configuration\\Loader\\YamlFileLoader to use the pecl extension YAML if available instead of the Symfonies\'s Yaml::parse. This should speed up the parsing of the siteconfig yaml and associated files. It does not touch EXT:form yaml files. This extension is experimental and a proof-of-concept. It might work in production.',
     'category' => 'plugin',
